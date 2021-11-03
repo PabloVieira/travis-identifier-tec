@@ -1,8 +1,8 @@
         -:    0:Source:identifier.c
         -:    0:Graph:identifier.gcno
-        -:    0:Data:identifier.gcda
-        -:    0:Runs:4
-        -:    0:Programs:1
+        -:    0:Data:-
+        -:    0:Runs:0
+        -:    0:Programs:0
         -:    1:// ----------------------------------------------------------------
         -:    2:// ESPECIFICAÇÃO: O programa deve determinar se um identificador
         -:    3:// é ou não válido. Um identificador válido deve começar com uma
@@ -12,87 +12,87 @@
         -:    7:
         -:    8:#include <stdio.h>
         -:    9:
-function valid_s called 4 returned 100% blocks executed 100%
-        4:   10:int valid_s(char ch) {
-        4:   11:  if (((ch >= 'A') && (ch <= 'Z')) || ((ch >= 'a') && (ch <= 'z')))
-branch  0 taken 50% (fallthrough)
-branch  1 taken 50%
-branch  2 taken 100% (fallthrough)
-branch  3 taken 0%
-branch  4 taken 50% (fallthrough)
-branch  5 taken 50%
-branch  6 taken 100% (fallthrough)
-branch  7 taken 0%
-        2:   12:    return 1;
+function valid_s called 0 returned 0% blocks executed 0%
+    #####:   10:int valid_s(char ch) {
+    #####:   11:  if (((ch >= 'A') && (ch <= 'Z')) || ((ch >= 'a') && (ch <= 'z')))
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+branch  3 never executed
+branch  4 never executed
+branch  5 never executed
+branch  6 never executed
+branch  7 never executed
+    #####:   12:    return 1;
         -:   13:  else
-        2:   14:    return 0;
+    #####:   14:    return 0;
         -:   15:}
         -:   16:
-function valid_f called 22 returned 100% blocks executed 89%
-       22:   17:int valid_f(char ch) {
-       22:   18:  if (((ch >= 'A') && (ch <= 'Z')) || ((ch >= 'a') && (ch <= 'z')) || ((ch >= '0') && (ch <= '9')))
-branch  0 taken 59% (fallthrough)
-branch  1 taken 41%
-branch  2 taken 100% (fallthrough)
-branch  3 taken 0%
-branch  4 taken 59% (fallthrough)
-branch  5 taken 41%
-branch  6 taken 0% (fallthrough)
-branch  7 taken 100%
-branch  8 taken 100% (fallthrough)
-branch  9 taken 0%
-branch 10 taken 100% (fallthrough)
-branch 11 taken 0%
-       22:   19:    return 1;
+function valid_f called 0 returned 0% blocks executed 0%
+    #####:   17:int valid_f(char ch) {
+    #####:   18:  if (((ch >= 'A') && (ch <= 'Z')) || ((ch >= 'a') && (ch <= 'z')) || ((ch >= '0') && (ch <= '9')))
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+branch  3 never executed
+branch  4 never executed
+branch  5 never executed
+branch  6 never executed
+branch  7 never executed
+branch  8 never executed
+branch  9 never executed
+branch 10 never executed
+branch 11 never executed
+    #####:   19:    return 1;
         -:   20:  else
     #####:   21:    return 0;
         -:   22:}
         -:   23:
-function main called 4 returned 100% blocks executed 95%
-        4:   24:int main(void) {
+function main called 0 returned 0% blocks executed 0%
+    #####:   24:int main(void) {
         -:   25:  char achar;
         -:   26:  int  length, valid_id;
-        4:   27:  length = 0;
-        4:   28:  printf("Identificador: ");
-call    0 returned 100%
-        4:   29:  achar = fgetc(stdin);
-call    0 returned 100%
-        4:   30:  valid_id = valid_s(achar);
-call    0 returned 100%
-        4:   31:  if(valid_id) {
-branch  0 taken 50% (fallthrough)
-branch  1 taken 50%
-        2:   32:    length = 1;
+    #####:   27:  length = 0;
+    #####:   28:  printf("Identificador: ");
+call    0 never executed
+    #####:   29:  achar = fgetc(stdin);
+call    0 never executed
+    #####:   30:  valid_id = valid_s(achar);
+call    0 never executed
+    #####:   31:  if(valid_id) {
+branch  0 never executed
+branch  1 never executed
+    #####:   32:    length = 1;
         -:   33:  }
-        4:   34:  achar = fgetc(stdin);
-call    0 returned 100%
-       30:   35:  while(achar != '\n') {
-branch  0 taken 85%
-branch  1 taken 15% (fallthrough)
-       22:   36:    if(!(valid_f(achar))) {
-call    0 returned 100%
-branch  1 taken 0% (fallthrough)
-branch  2 taken 100%
+    #####:   34:  achar = fgetc(stdin);
+call    0 never executed
+    #####:   35:  while(achar != '\n') {
+branch  0 never executed
+branch  1 never executed
+    #####:   36:    if(!(valid_f(achar))) {
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
     #####:   37:      valid_id = 0;
         -:   38:    }
-       22:   39:    length++;
-       22:   40:    achar = fgetc(stdin);
-call    0 returned 100%
+    #####:   39:    length++;
+    #####:   40:    achar = fgetc(stdin);
+call    0 never executed
         -:   41:  }
-        4:   42:  if (valid_id && (length >= 1) && (length < 6)) {
-branch  0 taken 50% (fallthrough)
-branch  1 taken 50%
-branch  2 taken 100% (fallthrough)
-branch  3 taken 0%
-branch  4 taken 50% (fallthrough)
-branch  5 taken 50%
-        1:   43:    printf("Valido\n");
-call    0 returned 100%
-        1:   44:    return 0;
+    #####:   42:  if (valid_id && (length >= 1) && (length < 6)) {
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+branch  3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:   43:    printf("Valido\n");
+call    0 never executed
+    #####:   44:    return 0;
         -:   45:  }
         -:   46:  else {
-        3:   47:    printf("Invalido\n");
-call    0 returned 100%
-        3:   48:    return 1;
+    #####:   47:    printf("Invalido\n");
+call    0 never executed
+    #####:   48:    return 1;
         -:   49:  }
         -:   50:}
