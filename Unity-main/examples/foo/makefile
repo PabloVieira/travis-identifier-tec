@@ -26,6 +26,7 @@ C_COMPILER=clang
 endif
 
 UNITY_ROOT=../..
+IDENTIFIER_ROOT=../../../
 
 CFLAGS=-std=c99
 CFLAGS += -Wall
